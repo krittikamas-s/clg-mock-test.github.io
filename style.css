@@ -226,6 +226,11 @@ button:disabled { opacity: 0.3; cursor: not-allowed; transform: none !important;
 
     .nav-buttons { padding: 15px; background: white; box-shadow: 0 -5px 15px rgba(0,0,0,0.05); margin-top: 10px; }
     .nav-buttons button { max-width: none; }
+
+    #short-answer-input {
+        padding: 12px 16px;
+        font-size: 16px; /* Prevents iOS Safari from auto-zooming on focus */
+    }
 }
 
 /* --- Question Map Palette --- */
@@ -243,5 +248,50 @@ button:disabled { opacity: 0.3; cursor: not-allowed; transform: none !important;
 .hidden { display: none !important; }
 #question-image { display: block; max-width: 100%; height: auto; margin: 0 auto 20px; border-radius: 8px; }
 .primary-btn { background-color: var(--accent-orange); color: white; border: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; }
+.primary-btn:hover { background-color: var(--orange-hover);  font-size: 0.95rem; cursor: pointer; transition: 0.2s;}
 
-.primary-btn:hover { background-color: var(--orange-hover); font-size: 0.95rem; cursor: pointer; transition: 0.2s;}
+#input-container {
+    margin: 20px 0;
+    width: 100%;
+}
+
+#short-answer-input {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--text-color);
+    background-color: #ffffff;
+    border: 2px solid #dee2e6; /* Matches your 'Previous' button border */
+    border-radius: 12px;       /* Matches your navigation button radius */
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+    outline: none;
+}
+
+/* Hover state */
+#short-answer-input:hover:not(:disabled) {
+    border-color: #ced4da;
+}
+
+/* Modern Focus state using your Primary Blue */
+#short-answer-input:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 4px rgba(0, 50, 146, 0.1); /* Subtle blue glow */
+    background-color: #fff;
+}
+
+/* Disabled state (when question is already answered) */
+#short-answer-input:disabled {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    cursor: not-allowed;
+    border-color: #e9ecef;
+}
+
+/* Style for the placeholder text */
+#short-answer-input::placeholder {
+    color: #adb5bd;
+    font-style: italic;
+    font-size: 0.95rem;
+}
