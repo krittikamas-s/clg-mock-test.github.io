@@ -1,6 +1,8 @@
 # Instructions
-1. Open [krittikamas-s.gitgub.io](https://krittikamas-s.github.io/) to run the application
-2. Toggle the ```Toggle Question Map``` to display ```Export/Import progress``` options to manage you progress!
+1. Clone this repository and name the repository in the format Open ```{YOU USERNAME}.github.io```
+2. Wait for your repository deployment completion
+3. Open you [USERNAME.gitgub.io](https://Your-Git-Username.github.io/) to run the application
+4. Toggle the ```Toggle Question Map``` to display ```Export/Import progress``` options to manage you progress!
 
 
 ### REMINDER ###
